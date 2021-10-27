@@ -1,0 +1,101 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-size: 62.5%;
+    font-family: 'Fjalla One', sans-serif;
+    background-color: rosybrown;
+}
+img {
+    width: 100%;
+}
+h1, h2, h3 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+/** Header **/
+.site-header {
+    background-color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+    border-bottom: 5px solid #000;
+}
+.site-header h1 {
+    font-size: 3rem;
+}
+
+/** Menu desplegable **/
+.menu-desplegable {
+    width: 100%;
+    background-color: darkslategrey;
+}
+.menu-desplegable label:hover {
+    cursor: pointer;
+}
+.menu-desplegable label img {
+    width: 5rem;
+    padding: 1rem;
+    border-right: 2px solid #fff;
+}
+@media (min-width: 768px) {
+    .menu-desplegable label { /** Imagen del boton del checkbox **/
+        display: none;
+    }
+}
+
+/** Boton que aciiona el menu **/
+#btn-menu {
+    display: none;
+}
+#btn-menu:checked ~ .menu {
+    margin: 0;
+}
+
+
+/** Nav del menu **/
+.menu {
+    position: absolute;
+    width: 60%;
+    background-color: darkslategray;
+    margin-left: -60%;
+    transition: all .8s;
+}
+@media (min-width: 768px) {
+    .menu {
+        margin: 0;
+        width: 100%;
+    }
+}
+.menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+@media (min-width: 768px) {
+    .menu ul {
+        display: flex;
+    }
+}
+.menu li {
+    padding: 1.5rem 0;
+    border-top: 2px solid #000;
+}
+@media (min-width: 768px) {
+    .menu li {
+        flex: 1;
+        border-top: none;
+        border-right: 2px solid #fff;
+    }
+}
+.menu li a {
+    text-align: center;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    font-size: 2rem;
+}
